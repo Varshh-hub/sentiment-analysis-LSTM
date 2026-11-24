@@ -1,7 +1,6 @@
+# IMDB Movie Review Sentiment Analysis using LSTM
 
-# 🎬 IMDB Movie Review Sentiment Analysis using LSTM
-
-## 📌 Project Overview
+## Project Overview
 
 This project implements a Deep Learning-based Sentiment Analysis system to classify movie reviews as **Positive or Negative** using Long Short-Term Memory (LSTM) networks.
 
@@ -9,7 +8,7 @@ Using the IMDB Movie Reviews dataset, the model processes textual reviews throug
 
 The project explores NLP preprocessing techniques, Bag of Words (BoW), TF-IDF vectorization, and an LSTM-based neural network for binary sentiment classification.
 
-## 🎯 Objectives
+## Objectives
 
 - Perform sentiment classification on movie reviews.
 - Apply NLP preprocessing techniques to clean and normalize text.
@@ -18,7 +17,7 @@ The project explores NLP preprocessing techniques, Bag of Words (BoW), TF-IDF ve
 - Evaluate model performance using classification metrics.
 - Visualize training performance and prediction results.
 
-## 📊 Dataset
+## Dataset
 
 **Dataset:** IMDB Movie Reviews Dataset  
 **Source:** TensorFlow Keras Datasets
@@ -34,7 +33,7 @@ The project explores NLP preprocessing techniques, Bag of Words (BoW), TF-IDF ve
 
 The dataset contains equally distributed positive and negative movie reviews.
 
-## 🛠️ Technologies & Libraries
+## Technologies & Libraries
 
 - Python
 - TensorFlow & Keras
@@ -45,7 +44,7 @@ The dataset contains equally distributed positive and negative movie reviews.
 - NLTK
 - Scikit-learn
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ```text
        IMDB Dataset
@@ -54,7 +53,7 @@ The dataset contains equally distributed positive and negative movie reviews.
        Data Loading
              |
              v
-       Review Decoding
+      Review Decoding
              |
              v
        Text Cleaning
@@ -62,11 +61,11 @@ The dataset contains equally distributed positive and negative movie reviews.
              v
      NLP Preprocessing
    (Stopword Removal &
-       Stemming)
+        Stemming)
              |
              v
     Text Representation
-     (BoW & TF-IDF)
+       (BoW & TF-IDF)
              |
              v
       Sequence Padding
@@ -84,7 +83,7 @@ The dataset contains equally distributed positive and negative movie reviews.
     Sentiment Prediction
 ```
 
-## 🧹 Data Preprocessing
+## Data Preprocessing
 
 The following NLP preprocessing techniques were implemented:
 
@@ -94,7 +93,7 @@ The following NLP preprocessing techniques were implemented:
 4. **Text Vectorization:** Implemented CountVectorizer (BoW) and TfidfVectorizer for feature extraction.
 5. **Sequence Padding:** Converted reviews into fixed-length sequences of 250 tokens using Keras padding.
 
-## 🧠 Model Architecture
+## Model Architecture
 
 An LSTM-based Sequential Neural Network was developed using TensorFlow and Keras.
 
@@ -107,6 +106,7 @@ An LSTM-based Sequential Neural Network was developed using TensorFlow and Keras
 | Output | 1 neuron, Sigmoid activation |
 
 **Training Configuration:**
+
 - Optimizer: Adam
 - Loss Function: Binary Crossentropy
 - Batch Size: 128
@@ -115,7 +115,7 @@ An LSTM-based Sequential Neural Network was developed using TensorFlow and Keras
 - Early Stopping: Patience of 2 epochs
 - Random Seed: 42
 
-## 📈 Model Evaluation
+## Model Evaluation
 
 The trained LSTM model was evaluated on 25,000 unseen test reviews.
 
@@ -139,11 +139,12 @@ The notebook includes:
 - Classification Report
 - Actual vs. Predicted Sentiment Comparison
 
-## 🔍 Prediction System
+## Prediction System
 
 A custom prediction function was implemented to classify new movie reviews.
 
 The function:
+
 1. Accepts a user-provided movie review.
 2. Cleans and tokenizes the text.
 3. Converts words into numerical sequences.
@@ -151,7 +152,7 @@ The function:
 5. Passes the sequence through the trained LSTM model.
 6. Returns the predicted sentiment and positive probability.
 
-## 💾 Model Export
+## Model Export
 
 The trained model is saved in Keras format:
 
@@ -159,7 +160,7 @@ The trained model is saved in Keras format:
 model.save("imdb_lstm_sentiment_model.keras")
 ```
 
-## ⚠️ Model Limitations
+## Model Limitations
 
 The current model achieved 58.76% test accuracy, with relatively low recall for positive reviews.
 
@@ -172,7 +173,7 @@ This indicates that the model has difficulty identifying a significant proportio
 - Improving text preprocessing and sequence handling.
 - Evaluating alternative embedding approaches.
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 - Implement Bidirectional LSTM and GRU architectures.
 - Experiment with pretrained Word2Vec or GloVe embeddings.
@@ -180,7 +181,7 @@ This indicates that the model has difficulty identifying a significant proportio
 - Improve prediction reliability through hyperparameter tuning.
 - Develop an interactive sentiment analysis application using Flask or Streamlit.
 
-## 👩‍💻 Author
+## Author
 
 **Varsha A.**
 
@@ -192,4 +193,4 @@ B.Sc. Artificial Intelligence & Machine Learning
 
 ---
 
-⭐ If you find this project interesting, consider giving the repository a star!
+If you find this project interesting, consider giving the repository a star!
